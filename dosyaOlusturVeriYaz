@@ -1,0 +1,20 @@
+
+import java.io.*;
+public class dosyaolus_Veriyaz {
+    public static void main(String[] args) throws FileNotFoundException  {
+        String path="s:\\example.txt";
+        File dosya=new File(path);
+        if (dosya.exists()) {
+            System.out.println("Dosya zaten var");
+            System.exit(0);
+          
+        }
+        else{
+            PrintWriter dosyayaz=new PrintWriter(dosya);
+            dosyayaz.print("Emine polat");
+            dosyayaz.println(20);
+           dosyayaz.print("Azra şahin");
+            dosyayaz.println(20);
+        }
+    }
+}
