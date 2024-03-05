@@ -1,0 +1,32 @@
+
+import  java.io.*;
+import java.util.Scanner;
+import java.io.FileWriter;
+
+public class ifadeTekmiCiftmi {
+    public static void main(String[] args) throws IOException  {
+        //Klavyeden girilen 5 adet sayılar içerisinde tek olanları TEK.DAT
+        //çift olanları CIFT.DAT dosyasına yazan program
+         File f1=new File("C://DENEMELER//TEK.DAT");
+         File f2=new File("c://DENEMELER//CIFT.DAT");
+         
+         FileWriter fw1=new FileWriter(f1);
+          FileWriter fw2=new FileWriter(f2);
+          Scanner k=new Scanner(System.in);
+          
+          int a;
+          for (int i = 1; i < 6; i++) {//işlem
+              System.out.println(i+"inci sayıyı  giriniz");
+            a=k.nextInt();
+              if (a%2==0) {
+                  fw2.write(a+" ");
+              }
+              else if(a%2==1){
+                  fw1.write(a+" ");
+              }
+              else ;// 0 gelirse bir iş yapma          
+        }
+       fw1.close();
+       fw2.close();
+    }
+}
