@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.io.*;
+import java.io.PrintWriter;
+
+public class ifadeleriSınıflandıran {
+    public static void main(String[] args) throws IOException {
+  //Klavyeden girilen 5 adet ifadeler içinde sayı olanları AYI.DAT
+  //karakter olanları KARAKTER.DAT dosyasına yazan programı yapınız
+File f1=new File("c://DENEMELER//KARAKTER.DAT");
+File f2=new File("c://DENEMELER//SAYI.DAT");
+
+PrintWriter pr1=new PrintWriter(f1);
+PrintWriter pr2=new PrintWriter(f2);
+
+Scanner k=new Scanner(System.in);
+char c;
+        for (int i = 0; i < 5; i++) {
+            c=k.nextLine().charAt(0);
+            if (c>='0'&& c<='9'){
+                pr1.print(c+" "); // RAKAM OLMA DURUMU
+            }
+            else    pr2.print(c+" "); //KARAKTER OLMA DURUMU
+        }
+        pr1.close();
+        pr2.close();
+    }
+}
