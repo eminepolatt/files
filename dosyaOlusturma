@@ -1,0 +1,21 @@
+
+import java.io.*;
+
+public class Dosyalar {
+
+ 
+    public static void main(String[] args) throws FileNotFoundException {
+        // dosya oluşturma 
+        String path="d:\\deneme.txt";
+        File dosya=new File(path);
+       
+            if (dosya.exists()) {
+                System.out.println("dosya zaten var");
+            }
+            else{
+                PrintWriter dosyayaz= new PrintWriter(dosya);
+                dosyayaz.print("Emine Polat");
+            }
+        }
+    }
+    
