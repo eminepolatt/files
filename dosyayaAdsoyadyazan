@@ -1,0 +1,19 @@
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+public class dosyayaAdsoyadyazan {
+    public static void main(String[] args)throws IOException  {
+        
+   
+    //ali.txt dosyasına adınızı soyadınız yazan programı yapınız
+    //1. adım file nesnesi tanımlama
+    File f1=new File("ali.txt");
+    //2. adım : NE İŞ YAPILACAK YAZMA, OKUMA ....
+    FileWriter fw=new FileWriter(f1); 
+    //3.adım: İŞLEM YAP
+    fw.write("Ali Veli Osman");
+    //4. adım: DOSYAYI KAPAT.
+    fw.close();
+     }
+}
