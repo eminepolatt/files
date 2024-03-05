@@ -1,0 +1,31 @@
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+
+public class ali_txtSiniflandır {
+    //ali.txt dosyasındaki stringleri karakter.dat sayıları da sayi.dat dosyasına yazdıran program
+    public static void main(String[] args) throws FileNotFoundException {
+          File f2=new File("ali.txt");
+        Scanner fk=new Scanner(f2);
+        
+        File f3=new File("sayi.dat");
+        File f4=new File("karakter.dat");
+        
+        PrintWriter pr3=new PrintWriter(f3);
+        PrintWriter pr4=new PrintWriter(f4);
+        
+        String s2=" ";
+        while(fk.hasNext()){ // dosya sonuna kadar okur
+            s2=fk.nextLine();
+            if (s2.charAt(0)>='0'&& s2.charAt(0)<='9') {
+                pr3.println(s2);
+            }else pr4.println(s2);
+    }
+        pr3.close();
+        pr4.close();
+        fk.close();
+    }
+}
