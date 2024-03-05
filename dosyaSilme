@@ -1,0 +1,13 @@
+
+public class dosyaSilme {
+    public static void main(String[] args) {
+        String path="d:\\sinif.dat";
+        File dosya =new File (path);
+        if (dosya.delete()) {
+            System.out.println("Dosya silinmiştir");
+        }
+        else{
+            System.out.println("Dosya silinememiştir");
+        }
+    }
+}
