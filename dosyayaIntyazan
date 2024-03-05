@@ -1,0 +1,23 @@
+ 
+//Bir dosyaya 100 tane rastgele int yazan program
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.util.Random;import java.io.IOException;
+
+
+public class dosyayaIntyazan {
+    public static void main(String[] args) throws FileNotFoundException {
+      try{
+          PrintStream writer=new PrintStream(new File("sayilar.txt"));
+          Random r=new Random();
+          final int LIMIT=100;
+          for (int i = 0; i <LIMIT; i++) {
+              writer.println(r.nextInt());
+          }writer.close();
+      }  catch(IOException e){
+          System.out.println("Bir hata oluştu");
+      }
+    }
+}
