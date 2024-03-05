@@ -1,0 +1,37 @@
+
+import java.io.IOException;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileWriter;
+
+public class veli_txteAdsoyadyaz {
+    public static void main(String[] args) throws IOException {
+        /// 2.ornek : kKlavyeden girilen 3 kişiye ait ad soyad numara bilgisini veli.txt e yazan program
+       Scanner k=new Scanner(System.in);
+        String ad_soyad_numara;
+    
+        File fx=new File("veli.txt");//FİLE tanımlama
+        FileWriter fw=new FileWriter(fx);// NE YAPACAK
+        for (int i = 1; i < 4; i++) {
+            System.out.println("lütfen  "+i+".inci kişinin adını soyadını numarasını giriniz");
+            ad_soyad_numara=k.next();
+           
+            fw.write(ad_soyad_numara); //İŞLEM
+        }
+        fw.close();//DOSYA KAPATMA
+   /* // FileWriter yerine PrintWriter kullansaydık
+    Scanner k=new Scanner(System.in);
+        String ad_soyad_numara;
+    
+        File fx=new File("veli.txt");//FİLE tanımlama
+        PrintWriter pr=new PrintWriter(fx);// dosya yazmak için 2. nesne
+        for (int i = 1; i < 4; i++) {
+            System.out.println("lütfen  "+i+".inci kişinin adını soyadını numarasını giriniz");
+            ad_soyad_numara=k.next();
+            pr.println(ad_soyad_numara);
+        }
+        pr.close();*/
+  
+    }
+ 
+}
