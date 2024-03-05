@@ -1,0 +1,26 @@
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.util.*;
+
+public class metindosyaOlustur {
+    public static void main(String[] args) throws FileNotFoundException {
+     PrintWriter ciktiAkimi=null;
+     String dosya="ornek.txt";
+     try{
+         ciktiAkimi=new PrintWriter(new FileOutputStream(dosya));
+         
+     }catch(FileNotFoundException hata){
+         System.out.println("ornek.txt dosyası oluşturuken hata oldu");
+         System.exit(0); //Programdan normal çıkış
+     }
+        System.out.println("Bir örnek cümle giriniz");
+        Scanner klavye=new Scanner(System.in);
+        String cumle=klavye.nextLine();
+        ciktiAkimi.println("klavyeden girdiğiniz cümle:"+cumle);
+        ciktiAkimi.println("Dosyayı kapatabiliriz");
+        ciktiAkimi.close();
+        System.out.println("Girilen cümle ornek.txt dosyasına yazıldı");
+    }
+}
