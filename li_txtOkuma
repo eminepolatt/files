@@ -1,0 +1,16 @@
+
+public class ali_txtOkuma  {
+       //ali.txt dosyasında sayılar ve stringler bulunmaktadır bunları okuyup ekrana yazan program 
+    public static void main(String[] args) throws IOException{
+        File f2=new File("ali.txt");
+        Scanner fk=new Scanner(f2);
+        String s2=" ";
+        while(fk.hasNext()){ // dosya sonuna kadar okur
+            s2=fk.nextLine();
+            System.out.println(s2);
+        }
+        fk.close();
+    }
+     
+    
+}
