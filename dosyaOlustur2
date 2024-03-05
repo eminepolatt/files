@@ -1,0 +1,26 @@
+
+import java.io.*;
+import java.util.Scanner;
+
+public class dosyaolus2 {
+    public static void main(String[] args) throws IOException {
+        File dosya=new File("ogrenci.txt");
+        PrintWriter cikti=null;
+        Scanner k=new Scanner(System.in);
+      
+            if (!dosya.exists()) {
+                dosya.createNewFile();
+                }else{
+                cikti =new PrintWriter(dosya);
+                for (int i = 0; i < 3; i++) {
+                    System.out.println(i+"öğrenci adı soyadı ve numarası");
+                    String ad=k.next();
+                    String soyad=k.next();
+                    int not=k.nextInt();
+                    cikti.println(ad+""+soyad+""+not);
+                }
+                cikti.close();
+            } 
+            
+        }
+    }
