@@ -1,0 +1,15 @@
+import java.io.*;
+public class dosyaOlusturma {
+    public static void main(String[] args) {
+    String path="d:\\deneme.txt";
+    File dosya=new File(path);
+    try{
+        if (!dosya.exists()) {
+            dosya.createNewFile();
+        }else{
+            System.out.println("Dosya mevcut");
+        }
+    }catch(IOException e){
+        System.out.println(e.getMessage());
+    }
+    }
